@@ -1,23 +1,28 @@
 package com.wecp.progressive.entity;
 
-<<<<<<< HEAD
-public class Accounts {
+import javax.persistence.*;
 
-=======
+@Entity
 public class Accounts implements Comparable<Accounts> {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int accountId;
-    private int customerId;
+    @ManyToOne
+    @JoinColumn(name = "customerId") // name refers to the column name in the Accounts table
+    private Customers customer;
+
     private double balance;
 
     public Accounts() {
         // constrcutor
     }
 
+
     public Accounts(int accountId, int customerId, double balance) {
         this.accountId = accountId;
-        this.customerId = customerId;
-        this.balance = balance;
+        this.customer.setCustomerId(customerId);
+        this.balance=balance;
     }
 
     // Getters and setters
@@ -29,12 +34,12 @@ public class Accounts implements Comparable<Accounts> {
         this.accountId = accountId;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public Customers getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customers customer) {
+        this.customer = customer;
     }
 
     public double getBalance() {
@@ -50,5 +55,4 @@ public class Accounts implements Comparable<Accounts> {
         // Implement comparison logic based on account balance
         return Double.compare(this.getBalance(), otherAccounts.getBalance());
     }
->>>>>>> 2d91fb647876eb6e217f2aeb105bdfea96dc6e8f
 }

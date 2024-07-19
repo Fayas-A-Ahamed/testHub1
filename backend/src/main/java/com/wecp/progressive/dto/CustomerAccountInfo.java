@@ -1,17 +1,11 @@
 package com.wecp.progressive.dto;
 
 public class CustomerAccountInfo {
-<<<<<<< HEAD
-
-=======
->>>>>>> 2d91fb647876eb6e217f2aeb105bdfea96dc6e8f
     private int customerId;
     private String customerName;
     private String email;
     private int accountId;
     private double balance;
-<<<<<<< HEAD
-=======
 
     public CustomerAccountInfo(int customerId, String customerName, String email, int accountId, double balance) {
         this.customerId = customerId;
@@ -73,5 +67,4 @@ public class CustomerAccountInfo {
                 ", balance=" + balance +
                 '}';
     }
->>>>>>> 2d91fb647876eb6e217f2aeb105bdfea96dc6e8f
 }

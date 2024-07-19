@@ -1,9 +1,5 @@
 package com.wecp.progressive.service;
 
-<<<<<<< HEAD
-public class CustomerServiceImpl {
-
-=======
 
 import com.wecp.progressive.dao.CustomerDAO;
 import com.wecp.progressive.dao.CustomerDAOImpl;
@@ -79,5 +75,4 @@ public class CustomerServiceImpl implements CustomerService {
     public void emptyArrayList() {
         customersList = new ArrayList<>();
     }
->>>>>>> 2d91fb647876eb6e217f2aeb105bdfea96dc6e8f
 }

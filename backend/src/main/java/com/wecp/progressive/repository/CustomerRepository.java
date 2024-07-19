@@ -1,17 +1,17 @@
 package com.wecp.progressive.repository;
 
-<<<<<<< HEAD
-
-public interface CustomerRepository  {
-=======
+import com.wecp.progressive.entity.Customers;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.wecp.progressive.entity.Customers;
+import java.util.List;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customers,Integer> {
-    public boolean existsByNameAndEmail(String name, String email);
->>>>>>> 2d91fb647876eb6e217f2aeb105bdfea96dc6e8f
+public interface CustomerRepository extends JpaRepository<Customers, Integer> {
 
+    Customers findByCustomerId(@Param("customerId") int customerId);
+
+    void deleteByCustomerId(@Param("customerId") int customerId);
+    Customers findByNameAndEmail(@Param("name") String name, @Param("email") String email);
 }
