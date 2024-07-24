@@ -1,5 +1,5 @@
 
-import { AccountTS } from './Account';
+import { AccountTS } from './Accountts';
 
 export class TransactionTS {
     transactionId?: number;
