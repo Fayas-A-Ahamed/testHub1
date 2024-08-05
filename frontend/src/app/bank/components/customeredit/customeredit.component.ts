@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-customeredit',
   templateUrl: './customeredit.component.html',
-  styleUrls: ['./customeredit.component.scss']
+  styleUrls: ['./customeredit.component.css']
 })
 export class EditCustomerComponent implements OnInit {
  
